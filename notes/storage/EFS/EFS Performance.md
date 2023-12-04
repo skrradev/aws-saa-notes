@@ -2,7 +2,7 @@
 
 
 ```mermaid
-graph TD;
+graph LR;
     EFS_Performance[("AWS EFS Performance")]
     EFS_Performance --> Performance_Modes[("Performance Modes")]
     EFS_Performance --> Throughput_Modes[("Throughput Modes")]

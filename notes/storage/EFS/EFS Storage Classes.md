@@ -2,7 +2,7 @@
 
 
 ```mermaid
-graph TD;
+graph LR;
     EFS_Storage_Classes[("EFS Storage Classes")]
     EFS_Storage_Classes --> Standard[("EFS Standard")]
     EFS_Storage_Classes --> IA[("EFS Infrequent Access (IA)")]
