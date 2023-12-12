@@ -240,6 +240,16 @@ RDSBackup -->|Best Practices| BackupBestPractices[("Backup Best Practices\n- Reg
 | Use Case                   | Long-term storage, archiving, or migration| Quick recovery, operational restores       |
 
 
+| Multi-AZ deployments | Multi-Region deployments | Read replicas |
+|----------------------|--------------------------|---------------|
+| Main purpose is high availability | Main purpose is disaster recovery and local performance | Main purpose is scalability |
+| Non-Aurora: synchronous replication; Aurora: asynchronous replication | Asynchronous replication | Asynchronous replication |
+| Non-Aurora: only the primary instance is active; Aurora: all instances are active | All regions are accessible and can be used for reads | All read replicas are accessible and can be used for read scaling |
+| Non-Aurora: automated backups are taken from standby; Aurora: automated backups are taken from shared storage layer | Automated backups can be taken in each region | No backups configured by default |
+| Always span at least two Availability Zones within a single region | Each region can have a Multi-AZ deployment | Can be within an Availability Zone, Cross-AZ, or Cross-Region |
+| Non-Aurora: database engine version upgrades happen on primary; Aurora: all instances are updated together | Non-Aurora: database engine version upgrade is independent in each region; Aurora: all instances are updated together | Non-Aurora: database engine version upgrade is independent from source instance; Aurora: all instances are updated together |
+| Automatic failover to standby (non-Aurora) or read replica (Aurora) when a problem is detected | Aurora allows promotion of a secondary region to be the master | Can be manually promoted to a standalone database instance (non-Aurora) or to be the primary instance (Aurora) |
+
 
 ## For exam
 
@@ -275,3 +285,6 @@ graph LR
     N --> O[Balanced Customization and Manageability]
 
 ```
+
+
+

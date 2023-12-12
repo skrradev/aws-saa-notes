@@ -123,6 +123,18 @@ graph LR;
 
 ```
 
+| Feature                | On-Demand Instances                                      | Reserved Instances                                                  | Spot Instances                                                  | Savings Plans                                                   | Dedicated Hosts                                                 |
+|------------------------|----------------------------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| Pricing                | Pay for compute capacity by the hour or second           | Upfront payment for a commitment of 1 or 3 years to get a discount  | Bid for unused capacity at potentially lower prices              | Commit to a consistent amount of usage (in $/hour) for 1 or 3 years to receive a discount | Pay for a physical server fully dedicated to your use for a 3-year period |
+| Discounts              | None                                                     | Up to 75% compared to On-Demand pricing                             | Up to 90% compared to On-Demand pricing                         | Up to 72% compared to On-Demand pricing                         | Varies, generally cheaper than equivalent On-Demand capacity   |
+| Capacity reservation   | No (but can be enabled with Capacity Reservations)       | Yes, with a Reserved Instance                                      | No, instances can be terminated by AWS if your bid price is exceeded | No, similar to On-Demand but with discount applied              | Yes, since you are paying for the dedicated hardware            |
+| Term flexibility       | No long-term commitment                                  | 1 or 3 years                                                        | Transient, no long-term commitment                               | 1 or 3 years                                                   | 3 years                                                        |
+| Payment options        | Pay as you go                                            | All upfront, partial upfront, or no upfront                        | Pay for what you use with no commitment                          | All upfront, partial upfront, or no upfront                     | All upfront, partial upfront, or no upfront                     |
+| Use cases              | Short-term, sporadic workloads                           | Steady-state, predictable workloads                                | Flexible start and end times, fault-tolerant applications       | Mixed workloads with predictable baseline usage                 | Compliance or licensing needs that require dedicated hardware   |
+| Availability           | Readily available                                        | Subject to availability                                             | Varies based on demand and bid price                             | Readily available                                               | Subject to availability                                         |
+| Customizability        | Standard EC2 features                                    | Same as On-Demand, plus option for Convertible Reserved Instances  | Same as On-Demand                                               | More flexibility compared to Reserved Instances                 | Ability to use your existing server-bound software licenses     |
+
+
 
 
 ## For exam
